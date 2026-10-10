@@ -8,7 +8,6 @@ Chef Claude is a React recipe generator that suggests meals based on ingredients
 - **Recipe generation:** Click **Get a recipe** once you have at least four ingredients. The current app calls Anthropic's Claude API to suggest a meal.
 - **Readable results:** Generated recipe text is rendered using React Markdown.
 - **Smooth navigation:** The page scrolls toward the recipe section when a response arrives.
-- **Alternative AI function:** The source includes a Hugging Face/Mixtral function, although the user interface currently calls Claude.
 
 ## Tech Stack and Dependencies
 
@@ -21,7 +20,6 @@ Chef Claude is a React recipe generator that suggests meals based on ingredients
 | Vite React Plugin | React support for Vite | [@vitejs/plugin-react on npm](https://www.npmjs.com/package/@vitejs/plugin-react) |
 | Anthropic SDK | Claude-based recipe generation | [@anthropic-ai/sdk on npm](https://www.npmjs.com/package/@anthropic-ai/sdk) |
 | React Markdown | Render formatted recipe responses | [react-markdown on npm](https://www.npmjs.com/package/react-markdown) |
-| Hugging Face Inference | Optional alternate model function in the source | [@huggingface/inference on npm](https://www.npmjs.com/package/@huggingface/inference) |
 
 All JavaScript packages and their version requirements are listed in [`package.json`](./package.json).
 
@@ -46,7 +44,7 @@ npm --version
    npm install
    ```
 
-   This installs React, React DOM, Vite, React Markdown, the Anthropic SDK, the Hugging Face package, and the Vite React plugin based on `package.json`. You do **not** need to install each package separately.
+   This installs React, React DOM, Vite, React Markdown, the Anthropic SDK, and the Vite React plugin based on `package.json`. You do **not** need to install each package separately.
 
 3. Start the Vite development server:
 
@@ -96,7 +94,7 @@ ChefClaude/
 │   └── Main.jsx              # Ingredient state and recipe generation
 ├── images/
 │   └── chef-claude-icon.png
-├── ai.js                      # Claude and alternate Hugging Face requests
+├── ai.js                      # Claude requests
 ├── App.jsx                    # Main application component
 ├── index.css                  # Styling
 ├── index.html                 # HTML entry point
@@ -120,4 +118,3 @@ ChefClaude/
 - [Vite guide](https://vite.dev/guide/)
 - [React Markdown project](https://github.com/remarkjs/react-markdown)
 - [Anthropic API documentation](https://docs.anthropic.com/)
-- [Hugging Face JavaScript libraries](https://huggingface.co/docs/huggingface.js/index)
