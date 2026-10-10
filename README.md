@@ -117,3 +117,7 @@ ChefClaude/
 - [Vite guide](https://vite.dev/guide/)
 - [React Markdown project](https://github.com/remarkjs/react-markdown)
 - [Anthropic API documentation](https://docs.anthropic.com/)
+
+## Project Background
+
+This project was developed as a React learning exercise based on [Scrimba's Learn React course](https://scrimba.com/learn-react-c0e). It demonstrates React hooks, derived game state, conditional rendering, event handling, and reusable helper functions.
