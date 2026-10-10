@@ -100,7 +100,6 @@ ChefClaude/
 ├── index.html                 # HTML entry point
 ├── index.jsx                  # React rendering entry point
 ├── package.json               # Dependencies and npm scripts
-├── recipeCode.md              # Example recipe markup
 ├── vite.config.js             # Vite configuration
 └── README.md
 ```
