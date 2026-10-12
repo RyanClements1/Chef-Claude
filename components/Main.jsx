@@ -3,6 +3,7 @@ import IngredientsList from "./IngredientsList"
 import ClaudeRecipe from "./ClaudeRecipe"
 import { getRecipeFromChefClaude } from "../ai"
 
+
 export default function Main() {
     const [ingredients, setIngredients] = React.useState(
         []
@@ -21,10 +22,16 @@ export default function Main() {
         }
     }, [recipe])
 
-    async function getRecipe() {
-        const recipeMarkdown = await getRecipeFromChefClaude(ingredients)
+async function getRecipe() {
+    try {
+        const recipeMarkdown =
+            await getRecipeFromChefClaude(ingredients)
+
         setRecipe(recipeMarkdown)
+    } catch (error) {
+        alert(error.message)
     }
+}
 
     function addIngredient(formData) {
         const newIngredient = formData.get("ingredient")
